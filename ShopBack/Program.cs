@@ -20,6 +20,7 @@ namespace ShopBack
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseUrls("http://localhost:5044");
                     webBuilder.UseStartup<Startup>();
                 });
     }
