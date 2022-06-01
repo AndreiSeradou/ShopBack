@@ -27,7 +27,9 @@ namespace ShopBack.Repositories
 
         public bool Create(Product model)
         {
-            if (_products.Contains(model))
+            var product = _products.FirstOrDefault(x => x.Name == model.Name);
+
+            if (product != null)
             {
                 return false;
             }
